@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Side projects — Sam Farnham</title>
+  <meta name="description" content="A few things I've built outside of work — a political card game and a Slack-based snack delivery service." />
+  <meta property="og:title" content="Side projects — Sam Farnham" />
+  <meta property="og:description" content="A few things I've built outside of work — a political card game and a Slack-based snack delivery service." />
+  <meta property="og:url" content="https://www.samfarnham.com/side-projects/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='52'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --bg: #fafaf7;
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --rule: #e8e6e0;
+      --accent: #1d4ed8;
+      --soft: rgba(0, 0, 0, 0.03);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111111;
+        --ink: #ededed;
+        --muted: #9a9a9a;
+        --rule: #2a2a2a;
+        --accent: #6ea8ff;
+        --soft: rgba(255, 255, 255, 0.05);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 88px 24px 96px;
+    }
+    .back {
+      display: inline-block;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+    .back:hover { color: var(--accent); }
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 0 0 36px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      margin: 0 0 4px;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 36px 0 8px;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 14px;
+    }
+    p { margin: 0 0 14px; }
+    a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: var(--rule);
+      transition: text-decoration-color 0.15s ease, color 0.15s ease;
+    }
+    a:hover {
+      text-decoration-color: var(--accent);
+      color: var(--accent);
+    }
+    .project {
+      padding: 32px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .project:first-of-type { border-top: 1px solid var(--rule); }
+    .project:last-of-type { border-bottom: none; }
+    .writeup {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px dashed var(--rule);
+    }
+    .byline {
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 24px;
+    }
+    .caption {
+      font-weight: 600;
+      margin: 28px 0 10px;
+    }
+    img.hero {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      margin: 0 auto 28px;
+      border-radius: 4px;
+    }
+    img.shot {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 0 8px;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+    }
+    .video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin: 18px 0 8px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--soft);
+    }
+    .video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .nomenclature {
+      list-style: none;
+      padding: 14px 18px;
+      margin: 0 0 18px;
+      background: var(--soft);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+    }
+    .nomenclature li {
+      padding: 3px 0;
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 14px;
+    }
+    footer {
+      margin-top: 48px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">← Sam Farnham</a>
+
+    <h1>Side projects</h1>
+
+    <article class="project">
+      <h2>Alternative Facts</h2>
+      <p class="meta">Card game · One Show Bronze Pencil · Cannes Lion shortlist</p>
+      <p>
+        Following Kellyanne Conway's infamous line on Meet the Press, some
+        friends and I designed, wrote, and sold a card game within a matter
+        of days. It was meant to be a quick joke, and it ended up taking
+        meetings with Hasbro and the As Seen on TV company.
+      </p>
+      <p>
+        Alternative Facts won a One Show Bronze Pencil and was shortlisted
+        for a Cannes Lion.
+      </p>
+
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/RgZB5yBKbxM"
+          title="Alternative Facts — promo video"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+    </article>
+
+    <article class="project">
+      <h2>:Nom:</h2>
+      <p class="meta">Slack-based snack delivery</p>
+      <p>
+        A few coworkers and I built a Slack-based snack distribution service
+        for our office. Post an emoji of the snack you wanted (Diet Coke,
+        Peanut M&amp;Ms, seltzer) and your location, and your sustenance
+        appeared. Monthly Venmo charge tallied your consumption.
+      </p>
+      <p>
+        My friend Brad wrote a great summary of the whole endeavor.
+      </p>
+
+      <div class="writeup">
+        <h3>The Rise and Rise of :Nom:</h3>
+        <p class="byline">Commentary courtesy of Brad Jacobson.</p>
+
+        <img class="hero" src="images/01-header.gif" alt=":Nom: animated logo" />
+
+        <p>The best way to tell this story is through the voice of our customers…</p>
+
+        <p class="caption">Launched through a simple post to #general.</p>
+        <img class="shot" src="images/02-launch.png" alt="Slack message announcing the launch of :Nom: in #general" />
+
+        <p class="caption">A custom emoji <code>:nom:</code> indicated an order.</p>
+        <img class="shot" src="images/03-emoji.png" alt="Slack message with a :nom: emoji order" />
+
+        <p class="caption">The excitement for the product AND seamless service was palpable.</p>
+        <img class="shot" src="images/04-excitement.png" alt="Slack reactions and praise from early customers" />
+
+        <p class="caption">It caught on fast.</p>
+        <img class="shot" src="images/05-caught-on.png" alt="A flurry of :nom: orders in Slack" />
+
+        <p class="caption">Like, really fast.</p>
+        <img class="shot" src="images/06-really-fast.png" alt="Even more :nom: orders piling up" />
+
+        <p class="caption">We developed a NOMenclature:</p>
+        <ul class="nomenclature">
+          <li>🚨 — New Member Arrival!</li>
+          <li>🗣️ — WOMNOM (word-of-mouth nom) Referral</li>
+          <li>🚩 — Where are you?</li>
+          <li>🏃 — It's on its way!</li>
+          <li>📦 — We've delivered.</li>
+        </ul>
+        <img class="shot" src="images/07-nomenclature.png" alt="The NOMenclature in action across a Slack thread" />
+
+        <p class="caption">Some new members had trouble.</p>
+        <img class="shot" src="images/08-newbie-trouble.png" alt="A new customer fumbling the order syntax" />
+
+        <p class="caption">Some were in disbelief.</p>
+        <img class="shot" src="images/09-disbelief.png" alt="A customer expressing disbelief at the service" />
+
+        <p class="caption">Then we had our first product expansion.</p>
+        <img class="shot" src="images/10-expansion.png" alt="Announcement of the first product expansion" />
+
+        <p class="caption">You could say people were excited.</p>
+        <img class="shot" src="images/11-excited.png" alt="Slack reactions to the new product launch" />
+
+        <p class="caption">There were times when demand was too much.</p>
+        <img class="shot" src="images/12-demand.png" alt="Customers reporting that we'd run out" />
+
+        <p class="caption">When we sold out, we replaced the custom emoji with a blank white square.</p>
+        <img class="shot" src="images/13-sold-out.png" alt="The blank-white-square sold-out indicator in Slack" />
+
+        <p class="caption">We even got a few international orders.</p>
+        <img class="shot" src="images/14-international.png" alt="An order coming in from outside the office" />
+
+        <p class="caption">And we were sure to send people out in style.</p>
+        <p>✌️ for "See you later!"</p>
+        <img class="shot" src="images/15-farewell.png" alt="Send-off message in Slack as a colleague departs" />
+
+        <img class="shot" src="images/16-final.jpeg" alt="Closing photo from :Nom:" />
+      </div>
+    </article>
+
+    <footer>
+      &copy; <span id="year"></span> Sam Farnham
+    </footer>
+  </main>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
