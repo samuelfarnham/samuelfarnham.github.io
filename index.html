@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sam Farnham</title>
+  <meta name="description" content="I'm Sam Farnham, a product lead at PayPal working on consumer growth. Off the clock: very amateur photographer, chief misinformation officer of an award-winning political card game, and high school soccer coach." />
+  <meta property="og:title" content="Sam Farnham" />
+  <meta property="og:description" content="I'm Sam Farnham, a product lead at PayPal working on consumer growth. Off the clock: very amateur photographer, chief misinformation officer of an award-winning political card game, and high school soccer coach." />
+  <meta property="og:url" content="https://www.samfarnham.com" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='52'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --bg: #fafaf7;
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --rule: #e8e6e0;
+      --accent: #1d4ed8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111111;
+        --ink: #ededed;
+        --muted: #9a9a9a;
+        --rule: #2a2a2a;
+        --accent: #6ea8ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 88px 24px 96px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 0 0 28px;
+    }
+    p { margin: 0 0 18px; }
+    a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: var(--rule);
+      transition: text-decoration-color 0.15s ease, color 0.15s ease;
+    }
+    a:hover {
+      text-decoration-color: var(--accent);
+      color: var(--accent);
+    }
+    .links {
+      list-style: none;
+      padding: 0;
+      margin: 32px 0 0;
+      border-top: 1px solid var(--rule);
+    }
+    .links li { border-bottom: 1px solid var(--rule); }
+    .links a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px 12px;
+      padding: 14px 0;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .links a:hover { color: var(--accent); }
+    .links .label { font-weight: 500; }
+    .links .meta { color: var(--muted); font-size: 14px; }
+    footer {
+      margin-top: 64px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Sam Farnham</h1>
+
+    <p>
+      I'm Sam Farnham, a product lead at <a href="https://www.paypal.com">PayPal</a>
+      working on consumer growth. Off the clock: very amateur photographer,
+      chief misinformation officer of an award-winning political card game,
+      and high school soccer coach.
+    </p>
+
+    <p>
+      Want to get in touch? <a href="mailto:samuel.farnham@gmail.com">Email me.</a>
+    </p>
+
+    <ul class="links">
+      <li>
+        <a href="/side-projects/">
+          <span class="label">Side projects</span>
+          <span class="meta">a card game, a snack startup</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/samfarnham/">
+          <span class="label">Instagram</span>
+          <span class="meta">@samfarnham</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/samfarmhand">
+          <span class="label">Twitter</span>
+          <span class="meta">@samfarmhand</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/samfarnham">
+          <span class="label">LinkedIn</span>
+          <span class="meta">/in/samfarnham</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/samuelafarnham">
+          <span class="label">Facebook</span>
+          <span class="meta">/samuelafarnham</span>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:samuel.farnham@gmail.com">
+          <span class="label">Email</span>
+          <span class="meta">samuel.farnham@gmail.com</span>
+        </a>
+      </li>
+    </ul>
+
+    <footer>
+      &copy; <span id="year"></span> Sam Farnham
+    </footer>
+  </main>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
